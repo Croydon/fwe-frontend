@@ -1,0 +1,42 @@
+<div *ngIf="mode === 'view'">
+  <h1>{{beer.name}} <span class="alc">({{beer.alcPercent}} % alc.)</span></h1>
+  {{ beer.description}}<br>
+  <br>
+  {{beer.price}}€, Rating: {{beer.tasteRating}}<br>
+  <button (click)="onEditClicked()">Edit</button>
+  <button (click)="onBackClicked()" class="secondary">Back</button>
+</div>
+<div *ngIf="mode !== 'view'">
+  <form>
+      <label for="name">name</label><input id="name" name="name" type="text" placeholder="name" [(ngModel)]="beer.name">
+      <label for="alc">alc. %</label><input id="alc" name="alc" type="number" placeholder="alc. %" [(ngModel)]="beer.alcPercent">
+      <label for="description">description</label><input id="description" name="description" type="text" placeholder="description" [(ngModel)]="beer.description">
+      <label for="price">price</label><input id="price" name="price" type="number" placeholder="price" [(ngModel)]="beer.price">
+      <label for="rating">rating</label>
+      <span>
+          <label>
+            1
+            <input name="rating" type="radio" placeholder="rating" [value]=1 [(ngModel)]="beer.tasteRating">
+          </label>
+          <label>
+            2
+            <input name="rating" type="radio" placeholder="rating" [value]=2 [(ngModel)]="beer.tasteRating">
+          </label>
+          <label>
+              3
+          <input name="rating" type="radio" placeholder="rating" [value]=3 [(ngModel)]="beer.tasteRating">
+          </label>
+          <label>
+              4
+          <input name="rating" type="radio" placeholder="rating" [value]=4 [(ngModel)]="beer.tasteRating">
+          </label>
+          <label>
+              5
+          <input name="rating" type="radio" placeholder="rating" [value]=5 [(ngModel)]="beer.tasteRating">
+          </label>
+        </span>
+  </form>
+  <button (click)="onSaveClicked()">Save</button>
+  <button (click)="onBackClicked()" class="secondary">Cancel</button>
+  <button (click)="onDeleteClicked()" class="warning">Delete</button>
+</div>

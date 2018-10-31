@@ -1,0 +1,9 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 .alc {
+  font-size: 0.8rem;
+  font-weight: normal;
+}

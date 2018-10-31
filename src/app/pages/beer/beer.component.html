@@ -1,0 +1,5 @@
+<div *ngIf="beers.length > 0">
+  <app-beer-list-item [routerLink]="beer._id" *ngFor="let beer of beers" [beerItem]="beer"></app-beer-list-item>
+</div>
+<div *ngIf="beers.length == 0">No data yet...</div>
+<button routerLink="/beer/new">Add Beer</button>

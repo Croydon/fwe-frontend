@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.beer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.beer:hover {
+  background: #efefef;
+}
+
+.beer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 20px;
+}
+
+.beer-name {
+  flex-grow: 1;
+}
+
+.beer-rating {
+  width: 100px;
+  margin-left: 50px;
+}
